@@ -3,6 +3,8 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 
+import javax.swing.plaf.synth.SynthOptionPaneUI;
+
 public class StudentFormController {
 
     public TextField txtId;
@@ -17,7 +19,13 @@ public class StudentFormController {
     public TableColumn colAddress;
 
     public void btnSaveStudentOnAction(ActionEvent actionEvent) {
-
+        Student s1= new Student(
+                txtId.getText(),
+                txtName.getText(),
+                txtContact.getText(),
+                txtAddress.getText()
+        );
+        System.out.println(s1);
     }
 
     public void btnDeleteStudentOnAction(ActionEvent actionEvent) {
